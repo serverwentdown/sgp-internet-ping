@@ -4,14 +4,18 @@
 </h1>
 
 <p align="center">
-    A quick analysis of internet latency form Singapore to the rest of the world.
+    A quick analysis of Internet latency from Singapore to the rest of the world.
 </p>
 
-## Scanning the internet
+<p align="center">
+    <img src="poster.svg">
+</p>
 
-To scan the IPv4 internet, I used the tool [`masscan`](https://github.com/robertdavidgraham/masscan) by security researcher Robert Graham. He has extensively made use of `masscan` in the security research he does. It provides latency measurements up to the millisecond. 
+## Scanning the Internet
 
-I wrote a configuration file to run `masscan` on the entire internet with the included exclusion list, and scan the top 5 open ports according to [speedguide.net](https://www.speedguide.net/ports_common.php). It is stored as `scan.conf`. I started the scan with: 
+To scan the IPv4 Internet, I used the tool [`masscan`](https://github.com/robertdavidgraham/masscan) by security researcher Robert Graham. He has extensively made use of `masscan` in the security research he does. It provides latency measurements up to the millisecond. 
+
+I wrote a configuration file to run `masscan` on the entire Internet with the included exclusion list, and scan the top 5 open ports according to [speedguide.net](https://www.speedguide.net/ports_common.php). It is stored as `scan.conf`. I started the scan with: 
 
 ```
 masscan -c scan.conf
