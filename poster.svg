@@ -16,7 +16,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="poster.svg">
+   sodipodi:docname="poster.svg"
+   inkscape:export-filename="/Users/ambrose/Documents/sgp-internet-ping/poster.png"
+   inkscape:export-xdpi="200"
+   inkscape:export-ydpi="200">
   <defs
      id="defs4">
     <linearGradient
@@ -75,9 +78,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.24748737"
-     inkscape:cx="1098.1544"
-     inkscape:cy="3012.5562"
+     inkscape:zoom="0.175"
+     inkscape:cx="600.70343"
+     inkscape:cy="1984.4624"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"

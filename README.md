@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-    <img src="poster.svg">
+    <img src="poster.png" alt="poster">
 </p>
 
 ## Scanning the Internet
