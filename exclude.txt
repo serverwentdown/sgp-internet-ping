@@ -1,4 +1,19 @@
 
+
+
+# Additional networks I encountered
+
+# We have blocked someone from your IP space for abuse. Reason: Port Scanning. Log lines are below.  Time zone is UTC.
+# I am writing to inform you so that you can take whatever action is necessary to prevent this user from doing this again.
+# Please note, replies to this address will not be monitored.  If you need more information, please email it-incident@iu.edu.
+# Thank you,
+# University Information Security Office
+# Indiana University
+149.165.128.0/17
+192.12.206.0/24
+
+
+
 # Downloaded from https://raw.githubusercontent.com/robertdavidgraham/masscan/master/data/exclude.conf
 
 # http://www.iana.org/assignments/iana-ipv4-special-registry/iana-ipv4-special-registry.xhtml
@@ -289,4 +304,5 @@
 129.123.0.0/16
 144.39.0.0/16
 204.113.91.0/24
+
 

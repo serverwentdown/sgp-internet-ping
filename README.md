@@ -21,7 +21,7 @@ I wrote a configuration file to run `masscan` on the entire Internet with the in
 masscan -c scan.conf
 ```
 
-This produces the output file `scan.bin`.
+This produces the output file `scan.bin`. 
 
 ## Categorising readings by country
 
