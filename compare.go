@@ -1,9 +1,9 @@
 package main
 
 import (
-"log"
+	"log"
 )
 
 func main() {
-    log.Print("comp")
+	log.Print("comp")
 }

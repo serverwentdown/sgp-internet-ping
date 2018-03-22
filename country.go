@@ -1,10 +1,10 @@
 package main
 
 import (
-"log"
-"os"
+	"log"
+	"os"
 )
 
 func main() {
-    log.Print(os.Args[1])
+	log.Print(os.Args[1])
 }
