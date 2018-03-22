@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"log"
 	"strings"
+    "runtime"
 )
 
 type openPort struct {
@@ -38,6 +39,7 @@ func main() {
 	data := make([]openPort, 0)
 
 	for _, fin := range in {
+        runtime.GC()
 		log.Println("Reading file " + fin)
 		raw, err := ioutil.ReadFile(fin)
 		if err != nil {
@@ -68,6 +70,9 @@ func main() {
 		}
 		odata = append(odata, h)
 	}
+
+    data = nil
+    runtime.GC()
 
 	log.Println("Encoding json")
 	raw, err := json.Marshal(odata)
