@@ -15,13 +15,15 @@
 
 To scan the IPv4 Internet, I used the tool [`masscan`](https://github.com/robertdavidgraham/masscan) by security researcher Robert Graham. He has extensively made use of `masscan` in the security research he does. It provides latency measurements up to the millisecond. 
 
+> WARNING: Only scan the Internet if your service provider approves of it. It can cause networking issues.
+
 I wrote a configuration file to run `masscan` on the entire Internet with the included exclusion list, and scan the top 5 open ports according to [speedguide.net](https://www.speedguide.net/ports_common.php). It is stored as `scan.conf`. I started the scan with: 
 
 ```
 masscan -c scan.conf
 ```
 
-This produces the output file `scan.bin`. 
+This produces the output file `scan.bin`. You might want to make use of shards to scan only a portion of the internet per file as scanning the entire internet will produce a huge file that cannot be parsed unless you have enough RAM available. 
 
 ## Counting latency
 
