@@ -11,11 +11,6 @@ import (
 	"strings"
 )
 
-type hostLatency struct {
-	IP  uint32 `json:"ip"`
-	TTL int    `json:"ttl"`
-}
-
 type geoRange struct {
 	Start uint32
 	End   uint32
@@ -31,7 +26,7 @@ func main() {
 	in := strings.Split(*flagIn, ",")
 	out := *flagOut
 
-	data := make([]hostLatency, 0)
+	data := make(map[uint32]int, 0)
 
 	for _, fin := range in {
 		log.Println("Reading file " + fin)
@@ -41,14 +36,16 @@ func main() {
 		}
 
 		log.Println("Parsing file " + fin)
-		fdata := make([]hostLatency, 0)
+		fdata := make(map[uint32]int, 0)
 		err = json.Unmarshal(raw, &fdata)
 		if err != nil {
 			panic(err)
 		}
 
 		log.Println("File " + fin + " read successfully")
-		data = append(data, fdata...)
+		for k, v := range fdata {
+			data[k] = v
+		}
 	}
 
 	geo := make([]geoRange, 0)
@@ -104,20 +101,19 @@ func main() {
 
 	log.Println("Grouping latencies by country")
 	odata := make(map[string][]int, 0)
-	for _, o := range data {
-		ip := o.IP
-		ttl := o.TTL
-		found := false
-		for _, g := range geo {
-			if g.Start < ip && ip < g.End {
-				odata[g.CC] = append(odata[g.CC], ttl)
-				found = true
-				break
-			}
+	j := 0
+	for ip, ttl := range data {
+		for geo[j].End <= ip {
+			j += 1
 		}
-		if !found {
+		if ip < geo[j].Start {
+			j -= 1
 			odata["Unknown"] = append(odata["Unknown"], ttl)
+			continue
 		}
+		cc := geo[j].CC
+
+		odata[cc] = append(odata[cc], ttl)
 	}
 
 	log.Println("Encoding json")
