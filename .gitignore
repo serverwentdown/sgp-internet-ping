@@ -2,3 +2,6 @@
 
 scan*.bin
 scan*.json
+latency.json
+country.json
+country.csv

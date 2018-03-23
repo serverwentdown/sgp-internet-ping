@@ -1,12 +1,13 @@
 package main
 
 import (
-	"encoding/gob"
+	"encoding/binary"
+	"encoding/json"
 	"flag"
 	"io/ioutil"
 	"log"
+	"net"
 	"strings"
-    "runtime"
 )
 
 type openPort struct {
@@ -24,7 +25,7 @@ type portInfo struct {
 }
 
 type hostLatency struct {
-	IP  string `json:"ip"`
+	IP  uint32 `json:"ip"`
 	TTL int    `json:"ttl"`
 }
 
@@ -39,7 +40,6 @@ func main() {
 	data := make([]openPort, 0)
 
 	for _, fin := range in {
-        runtime.GC()
 		log.Println("Reading file " + fin)
 		raw, err := ioutil.ReadFile(fin)
 		if err != nil {
@@ -64,15 +64,13 @@ func main() {
 	log.Println("Reducing data to IP and latency")
 	odata := make([]hostLatency, 0)
 	for _, o := range data {
+		ip := binary.BigEndian.Uint32(net.ParseIP(o.IP)[12:])
 		h := hostLatency{
-			IP:  o.IP,
+			IP:  ip,
 			TTL: o.Ports[0].TTL,
 		}
 		odata = append(odata, h)
 	}
-
-    data = nil
-    runtime.GC()
 
 	log.Println("Encoding json")
 	raw, err := json.Marshal(odata)
@@ -80,7 +78,7 @@ func main() {
 		panic(err)
 	}
 	log.Println("Writing to file " + out)
-	err = ioutil.WriteFile(out, raw, 0)
+	err = ioutil.WriteFile(out, raw, 0644)
 	if err != nil {
 		panic(err)
 	}

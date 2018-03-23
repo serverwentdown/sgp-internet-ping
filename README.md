@@ -40,11 +40,10 @@ go run latency.go -in scan.json -out latency.json
 
 To associate an IP address with a country, a geolocation lookup database must be used. I used two sources of geolocation databases; Maxmind's GeoLite2, and Webnet77's IPToCountry; to test the accuracy of either database. 
 
-
 Next, I wrote and used a Go script to group the scans by country:
 
 ```
-go run country.go -in latency.json -db geolite -out country.json
+go run country.go -in latency.json -db iptocountry -out country.json
 ```
 
 ## Plotting the latency from Singapore by country
