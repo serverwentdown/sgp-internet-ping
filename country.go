@@ -9,6 +9,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
+    "math/rand"
 )
 
 type geoRange struct {
@@ -99,6 +100,7 @@ func main() {
 		}
 	}
 
+    // TODO: verify correctness
 	log.Println("Grouping latencies by country")
 	odata := make(map[string][]int, 0)
 	j := 0
@@ -113,8 +115,17 @@ func main() {
 		}
 		cc := geo[j].CC
 
-		odata[cc] = append(odata[cc], ttl)
+        if rand.Intn(100) == 0 {
+		    odata[cc] = append(odata[cc], ttl)
+        }
 	}
+
+	total := 0
+	for k, v := range odata {
+		log.Println("Country " + k + " has " + strconv.Itoa(len(v)) + " samples")
+		total += len(v)
+	}
+	log.Println("Total: " + strconv.Itoa(total))
 
 	log.Println("Encoding json")
 	raw, err := json.Marshal(odata)

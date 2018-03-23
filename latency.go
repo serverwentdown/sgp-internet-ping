@@ -24,11 +24,6 @@ type portInfo struct {
 	TTL    int    `json:"ttl"`
 }
 
-type hostLatency struct {
-	IP  uint32 `json:"ip"`
-	TTL int    `json:"ttl"`
-}
-
 var flagIn = flag.String("in", "", "comma-seperated list of input files")
 var flagOut = flag.String("out", "latency.json", "output file")
 
@@ -62,14 +57,10 @@ func main() {
 	}
 
 	log.Println("Reducing data to IP and latency")
-	odata := make([]hostLatency, 0)
+	odata := make(map[uint32]int, 0)
 	for _, o := range data {
 		ip := binary.BigEndian.Uint32(net.ParseIP(o.IP)[12:])
-		h := hostLatency{
-			IP:  ip,
-			TTL: o.Ports[0].TTL,
-		}
-		odata = append(odata, h)
+		odata[ip] = o.Ports[0].TTL
 	}
 
 	log.Println("Encoding json")
