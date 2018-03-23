@@ -105,6 +105,10 @@ func main() {
 	odata := make(map[string][]int, 0)
 	j := 0
 	for ip, ttl := range data {
+        if rand.Intn(100) == 0 {
+            continue
+        }
+
 		for geo[j].End <= ip {
 			j += 1
 		}
@@ -115,9 +119,7 @@ func main() {
 		}
 		cc := geo[j].CC
 
-        if rand.Intn(100) == 0 {
-		    odata[cc] = append(odata[cc], ttl)
-        }
+        odata[cc] = append(odata[cc], ttl)
 	}
 
 	total := 0

@@ -53,7 +53,7 @@ go run country.go -in latency.json -db iptocountry -out country.json
 I will start with a simple plot of latency to every country from Singapore. 
 
 ```
-go run json2csv.go -in country.json -out country.csv
+go run boxplot.go -in country.json -out boxplot.csv
 ```
 
 ## 
