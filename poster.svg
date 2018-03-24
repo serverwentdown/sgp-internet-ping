@@ -52435,11 +52435,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.8101934"
-     inkscape:cx="368.93048"
-     inkscape:cy="178.81918"
+     inkscape:zoom="0.90509668"
+     inkscape:cx="554.91604"
+     inkscape:cy="263.01271"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g113356"
      showgrid="false"
      inkscape:window-width="1440"
      inkscape:window-height="856"
@@ -80280,13 +80280,7 @@
            id="g113350">
           <g
              transform="matrix(7.874016e-5,0,0,-7.874016e-5,0.5,2631.5)"
-             id="g113356">
-            <path
-               inkscape:connector-curvature="0"
-               id="path113358"
-               style="fill:none;stroke:#d9d9d9;stroke-width:12700;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               d="M 0,0 15328900,0 15328900,33413701 0,33413701 0,0 Z" />
-          </g>
+             id="g113356" />
         </g>
       </g>
     </g>
