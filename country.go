@@ -7,9 +7,9 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
+	"sort"
 	"strconv"
 	"strings"
-    "math/rand"
 )
 
 type geoRange struct {
@@ -100,14 +100,22 @@ func main() {
 		}
 	}
 
-    // TODO: verify correctness
+	log.Println("Sorting IP addresses")
+	keys := make([]int, 0)
+	for k, _ := range data {
+		keys = append(keys, int(k))
+	}
+	sort.Ints(keys)
+
 	log.Println("Grouping latencies by country")
 	odata := make(map[string][]int, 0)
 	j := 0
-	for ip, ttl := range data {
-        if rand.Intn(100) == 0 {
-            continue
-        }
+	for _, k := range keys {
+		/*if rand.Intn(100) == 0 {
+		    continue
+		}*/
+		ip := uint32(k)
+		ttl := data[ip]
 
 		for geo[j].End <= ip {
 			j += 1
@@ -119,7 +127,7 @@ func main() {
 		}
 		cc := geo[j].CC
 
-        odata[cc] = append(odata[cc], ttl)
+		odata[cc] = append(odata[cc], ttl)
 	}
 
 	total := 0

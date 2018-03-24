@@ -5,3 +5,5 @@ scan*.json
 latency.json
 country.json
 boxplot.csv
+
+*test.json
