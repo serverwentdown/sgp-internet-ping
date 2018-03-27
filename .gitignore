@@ -1,5 +1,6 @@
 **/.DS_Store
 
+*.tar
 scan*.bin
 scan*.json
 latency.json
