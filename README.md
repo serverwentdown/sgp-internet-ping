@@ -48,8 +48,6 @@ go run country.go -in latency.json -db iptocountry -out country.json
 
 ## Plotting the latency from Singapore by country
 
-> Not implemented
-
 I will start with a simple plot of latency to every country from Singapore. 
 
 ```
