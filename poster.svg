@@ -75916,8 +75916,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.42426407"
-     inkscape:cx="2232.7531"
-     inkscape:cy="1879.9857"
+     inkscape:cx="2262.3592"
+     inkscape:cy="2018.4275"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -76195,7 +76195,7 @@
    style="font-size:65.00000954%;baseline-shift:sub"
    id="flowSpan51354">a</flowSpan>: μ<flowSpan
    style="font-size:65.00000954%;baseline-shift:sub"
-   id="flowSpan51362">1</flowSpan> &lt; μ<flowSpan
+   id="flowSpan51362">1</flowSpan> &gt; μ<flowSpan
    style="font-size:65.00000954%;baseline-shift:sub"
    id="flowSpan51364">2</flowSpan></flowPara><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.00000381px;line-height:129.99999523%;font-family:'Inter UI';-inkscape-font-specification:'Inter UI';text-align:start;text-anchor:start"
@@ -76215,9 +76215,9 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.00000381px;line-height:129.99999523%;font-family:'Inter UI';-inkscape-font-specification:'Inter UI';text-align:start;text-anchor:start"
          id="flowPara51441">SRS: Let's assume the sample to be a simple random sample.  </flowPara><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.00000381px;line-height:129.99999523%;font-family:'Inter UI';-inkscape-font-specification:'Inter UI';text-align:start;text-anchor:start"
-         id="flowPara51443">Independence: </flowPara><flowPara
+         id="flowPara51443">Independence: Because of randomisation, we are willing to take the two groups as independent samples. We are not sampling without replacement from a population of samples. </flowPara><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.00000381px;line-height:129.99999523%;font-family:'Inter UI';-inkscape-font-specification:'Inter UI';text-align:start;text-anchor:start"
-         id="flowPara51445">Normality: </flowPara><flowPara
+         id="flowPara51445">Normality: From the box plots, there are no visible outliers and the normality assumption seems reasonable. </flowPara><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.00000381px;line-height:129.99999523%;font-family:'Inter UI';-inkscape-font-specification:'Inter UI';text-align:start;text-anchor:start"
          id="flowPara51449" /><flowPara
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40.00000381px;line-height:129.99999523%;font-family:'Inter UI';-inkscape-font-specification:'Inter UI Bold';text-align:start;text-anchor:start"
@@ -76227,9 +76227,11 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.00000381px;line-height:129.99999523%;font-family:'Inter UI';-inkscape-font-specification:'Inter UI';text-align:start;text-anchor:start"
          id="flowPara51511" /><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.00000381px;line-height:129.99999523%;font-family:'Inter UI';-inkscape-font-specification:'Inter UI';text-align:start;text-anchor:start"
-         id="flowPara51509">t = </flowPara><flowPara
+         id="flowPara51509">t = 95.840</flowPara><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.00000381px;line-height:129.99999523%;font-family:'Inter UI';-inkscape-font-specification:'Inter UI';text-align:start;text-anchor:start"
-         id="flowPara4604">P-value = </flowPara><flowPara
+         id="flowPara51547">Using conservative estimate, df = 1037955 - 1 = 1037954</flowPara><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.00000381px;line-height:129.99999523%;font-family:'Inter UI';-inkscape-font-specification:'Inter UI';text-align:start;text-anchor:start"
+         id="flowPara4604">P-value = 0 (really close to zero)</flowPara><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.00000381px;line-height:129.99999523%;font-family:'Inter UI';-inkscape-font-specification:'Inter UI';text-align:start;text-anchor:start"
          id="flowPara51513" /><flowPara
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40.00000381px;line-height:129.99999523%;font-family:'Inter UI';-inkscape-font-specification:'Inter UI Bold';text-align:start;text-anchor:start"
@@ -76237,7 +76239,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.00000381px;line-height:129.99999523%;font-family:'Inter UI';-inkscape-font-specification:'Inter UI';text-align:start;text-anchor:start"
          id="flowPara51517" /><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.00000381px;line-height:129.99999523%;font-family:'Inter UI';-inkscape-font-specification:'Inter UI';text-align:start;text-anchor:start"
-         id="flowPara4608">Since the P-value is _ than 0.05, we _ H0 as there is _sufficient evidence to conclude that the mean latency to the US is lower than the mean latency to the Netherlands. </flowPara><flowPara
+         id="flowPara4608">Since the P-value is less than 0.05, we reject H0 and conclude that there is sufficient evidence to suggest that the mean latency to the US is lower than the mean latency to the Netherlands. </flowPara><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.00000381px;line-height:129.99999523%;font-family:'Inter UI';-inkscape-font-specification:'Inter UI';text-align:start;text-anchor:start"
          id="flowPara4610" /><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.00000381px;line-height:129.99999523%;font-family:'Inter UI';-inkscape-font-specification:'Inter UI';text-align:start;text-anchor:start"
@@ -105007,5 +105009,16 @@
          id="tspan51541"
          x="2361.6667"
          y="-109.30466" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:100%;font-family:'Helvetica Neue';-inkscape-font-specification:'Helvetica Neue, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="2043.5386"
+       y="-1571.0042"
+       id="text51543"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan51545"
+         x="2043.5386"
+         y="-1571.0042" /></text>
   </g>
 </svg>

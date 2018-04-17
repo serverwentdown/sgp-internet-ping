@@ -45,6 +45,7 @@ func main() {
 		median := stat.Quantile(0.50, stat.Empirical, ttls, nil)
 		q3 := stat.Quantile(0.75, stat.Empirical, ttls, nil)
 		max := stat.Quantile(1.00, stat.Empirical, ttls, nil)
+		mean := stat.Mean(ttls, nil)
 		odata = append(odata, []string{
 			cc,
 			strconv.Itoa(len(ttls)),
@@ -53,6 +54,7 @@ func main() {
 			strconv.FormatFloat(median, 'f', -1, 64),
 			strconv.FormatFloat(q3, 'f', -1, 64),
 			strconv.FormatFloat(max, 'f', -1, 64),
+			strconv.FormatFloat(mean, 'f', -1, 64),
 		})
 	}
 
